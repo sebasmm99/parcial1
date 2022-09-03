@@ -1,18 +1,13 @@
 const mongoose = require('mongoose')
-const peliculaSchema = mongoose.Schema({
-    movie_name:{
+const personaSchema = mongoose.Schema({
+    name:{
         type: String,
-        require: true,
-        unique: true
-    },
-    season:{
-        type: number,
         require: true
     },
-    autors:{
-        type: Array,
+    lastname:{
+        type: String,
         require: true
     }
 })
 
-module.exports = mongoose.model('PeliculaCollection', peliculaSchema)
+module.exports = mongoose.model('PersonaCollection', personaSchema)
